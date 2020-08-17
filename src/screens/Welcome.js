@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
   Image,
-  TouchableHighlight,
+  TouchableOpacity,
   ScrollView,
   Dimensions,
 } from 'react-native';
@@ -66,11 +66,11 @@ const Welcome = ({navigation}) => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Text>
         {renderDots()}
-        <TouchableHighlight onPress={() => navigation.navigate('Vpn')}>
-          <View style={styles.btn}>
-            <Text style={styles.btnText}>Get started</Text>
-          </View>
-        </TouchableHighlight>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Vpn')}
+          style={styles.btn}>
+          <Text style={styles.btnText}>Get started</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -139,6 +139,16 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
+
+    // shadowColor: '#000',
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 2,
+    // },
+    // shadowOpacity: 0.23,
+    // shadowRadius: 2.62,
+
+    elevation: 4,
   },
   btnText: {color: 'white'},
 });
