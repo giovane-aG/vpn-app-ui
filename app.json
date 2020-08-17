@@ -1,4 +1,6 @@
 {
   "name": "vpnAppUI",
-  "displayName": "vpnAppUI"
+  "displayName": "vpnAppUI",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png"
 }
